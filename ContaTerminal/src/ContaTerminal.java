@@ -20,6 +20,8 @@ public class ContaTerminal {
         System.out.println("Qual é o número de sua conta?");
         int numero = scanner.nextInt();
 
+        scanner.nextLine();
+
         System.out.println("Qual é a sua Agência?");
         String agencia = scanner.nextLine();
 
