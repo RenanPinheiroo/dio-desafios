@@ -29,7 +29,7 @@ public class ContaTerminal {
 
         
 
-    System.out.println("Ola, Sr. "+ nomeCliente + " " + sobreNomeCliente + " . Voce possui um saldo de" + saldo +  " na conta " + numero + "de Agência " + agencia);
+    System.out.println("Ola, Sr. "+ nomeCliente + " " + sobreNomeCliente + " . Voce possui um saldo de " + saldo +  " na conta " + numero + "de Agencia " + agencia);
 
     scanner.close();
     }
