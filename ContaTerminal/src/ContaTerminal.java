@@ -5,31 +5,31 @@ public class ContaTerminal {
     public static void main(String[] args) {
 
         System.out.println("---------------------------------------------------------------------------");
-        System.out.println("Olá, seja bem vindo ao Banco Bradesco! Poderia, por gentileza nos informar:");
+        System.out.println("Ola, seja bem vindo ao Banco Bradesco! Poderia, por gentileza nos informar:");
         System.out.println("---------------------------------------------------------------------------");
 
 
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.out.println("Qual é o seu nome?");
+        System.out.println("Qual e o seu nome?");
         String nomeCliente = scanner.nextLine();
        
-        System.out.println("Qual é o seu sobrenome?");
+        System.out.println("Qual e o seu sobrenome?");
         String sobreNomeCliente = scanner.nextLine();
 
-        System.out.println("Qual é o número de sua conta?");
+        System.out.println("Qual e o numero de sua conta?");
         int numero = scanner.nextInt();
 
         scanner.nextLine();
 
-        System.out.println("Qual é a sua Agência?");
+        System.out.println("Qual e a sua Agencia?");
         String agencia = scanner.nextLine();
 
         double saldo = 237.48;
 
         
 
-    System.out.println("Olá, Sr. "+ nomeCliente + " " + sobreNomeCliente + " . Você possui um saldo de" + saldo +  " na conta " + numero + "de Agência " + agencia);
+    System.out.println("Ola, Sr. "+ nomeCliente + " " + sobreNomeCliente + " . Voce possui um saldo de" + saldo +  " na conta " + numero + "de Agência " + agencia);
 
     scanner.close();
     }
