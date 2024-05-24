@@ -10,13 +10,13 @@ public class Case2 {
         while (NumeroFuncionarios < 5 && ProximoCandidato < candidatos.length) {
             String candidato = candidatos[ProximoCandidato++];
             double salary = Math.round(ValorPretendido());
-
-            System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
+                        System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
 
             if( salaryCia >= salary){
 
                 System.out.println("Candidato Selecionado!");
-    
+                NumeroFuncionarios++;
+                
             } else {
     
                 System.out.println("O Candidato nao foi selecionado!");
