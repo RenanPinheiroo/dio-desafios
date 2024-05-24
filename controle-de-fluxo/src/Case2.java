@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Case2 {
@@ -6,17 +7,20 @@ public class Case2 {
         double salaryCia = 2000;
         int NumeroFuncionarios = 0;
         int ProximoCandidato = 0 ;
+
+        ArrayList<String> selecionados = new ArrayList<>();
        
         while (NumeroFuncionarios < 5 && ProximoCandidato < candidatos.length) {
             String candidato = candidatos[ProximoCandidato++];
             double salary = Math.round(ValorPretendido());
-                        System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
+                System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
 
             if( salaryCia >= salary){
 
                 System.out.println("Candidato Selecionado!");
+                selecionados.add(candidato);
                 NumeroFuncionarios++;
-                
+
             } else {
     
                 System.out.println("O Candidato nao foi selecionado!");
@@ -24,7 +28,13 @@ public class Case2 {
             
         }
 
-        System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos!");
+        System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos! ");
+        System.out.println("Lista dos Selecionados: ");
+            for( String candidatoSelecionado : selecionados){
+
+                System.out.println(candidatoSelecionado);
+            }
+        
     }
 
 
@@ -40,6 +50,4 @@ public class Case2 {
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
 
     }
-
-
-}
+ }
