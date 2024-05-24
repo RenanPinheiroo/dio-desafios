@@ -13,21 +13,20 @@ public class Case2 {
 
             System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
 
-            if( salaryCia > salary){
+            if( salaryCia >= salary){
 
-                System.out.println("LIGAR PARA O CANDIDATO!");
-    
-            } else if( salaryCia == salary){
-    
-                System.out.println("LIGAR PARA O CANDIDATO, COM CONTRA PROPOSTA!");
+                System.out.println("Candidato Selecionado!");
     
             } else {
     
-                System.out.println("AGUARDANDO RESULTADO DOS DEMAIS CANDIDATOS!");
+                System.out.println("O Candidato nao foi selecionado!");
                 }
             
         }
+
+        System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos!");
     }
+
 
     static String[] getName(){
 
