@@ -30,8 +30,7 @@ public class Case1 {
                 System.out.println("Qual e a sua pretensao salarial?");
                
                 pretensaoSalarial = scan.nextInt();
-               
-              System.out.println("Por favor, insira um número válido.");
+
                scan.close();
         
                 return pretensaoSalarial;
