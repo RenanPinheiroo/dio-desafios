@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Case1 {
@@ -25,18 +26,13 @@ public class Case1 {
 
                 int pretensaoSalarial;
                 
-                try(Scanner scan = new Scanner(System.in)){
+                Scanner scan = new Scanner(System.in).useLocale(Locale.US);
                 System.out.println("Qual e a sua pretensao salarial?");
-                while (true) {
-                    if (scan.hasNextInt()) {
+               
                 pretensaoSalarial = scan.nextInt();
-                break;
-            }else {
-            System.out.println("Por favor, insira um número válido.");
-                    }
-                    scan.close();
-            }
-        }
+               
+              System.out.println("Por favor, insira um número válido.");
+               scan.close();
         
                 return pretensaoSalarial;
 }
