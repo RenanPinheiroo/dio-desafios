@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Case2 {
@@ -7,7 +9,7 @@ public class Case2 {
         double salaryCia = 2000;
         int NumeroFuncionarios = 0;
         int ProximoCandidato = 0 ;
-
+  
         ArrayList<String> selecionados = new ArrayList<>();
        
         while (NumeroFuncionarios < 5 && ProximoCandidato < candidatos.length) {
@@ -24,16 +26,30 @@ public class Case2 {
     
                 System.out.println("O Candidato nao foi selecionado!");
                 }
-            
+           
         }
 
-        System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos! ");
-        System.out.println("Lista dos Selecionados: ");
+            System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos! ");
+            System.out.println("Lista dos Selecionados: ");
             for( String candidatoSelecionado : selecionados){
 
                 System.out.println(candidatoSelecionado);
             }
-        
+
+
+            Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+            System.out.println("Ligar para os candidatos?");
+                   
+            String autorizaLigar = scan.next();
+
+            scan.close();
+
+           if(autorizaLigar.equals("Sim")){
+            System.out.println("Ligar!");
+        } else{
+
+            System.out.println("Nao ligar!");
+        }
     }
 
 
@@ -49,4 +65,5 @@ public class Case2 {
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
 
     }
- }
+
+ } 
