@@ -9,6 +9,7 @@ public class Case2 {
         double salaryCia = 2000;
         int NumeroFuncionarios = 0;
         int ProximoCandidato = 0 ;
+        
   
         ArrayList<String> selecionados = new ArrayList<>();
        
@@ -45,7 +46,10 @@ public class Case2 {
             scan.close();
 
            if(autorizaLigar.equals("Sim")){
-            System.out.println("Ligar!");
+            for(i=1; i<=3, i++){
+
+
+            }
         } else{
 
             System.out.println("Nao ligar!");
