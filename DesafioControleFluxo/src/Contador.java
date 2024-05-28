@@ -16,6 +16,7 @@ public class Contador {
 			contar(parametroUm, parametroDois);
 		
 		} catch (ParametrosInvalidosException e){
+            
 			System.out.println("O parametro Um nao pode ser menor que o parametro Dois");
 		}
 		

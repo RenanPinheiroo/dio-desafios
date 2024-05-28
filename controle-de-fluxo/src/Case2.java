@@ -8,13 +8,13 @@ public class Case2 {
     public static void main(String[] args) {
         String[] candidatos = getName();
         double salaryCia = 2000;
-        int NumeroFuncionarios = 0;
+        int numeroFuncionarios = 0;
         int ProximoCandidato = 0 ;
         
   
         ArrayList<String> selecionados = new ArrayList<>();
        
-        while (NumeroFuncionarios < 5 && ProximoCandidato < candidatos.length) {
+        while (numeroFuncionarios < 5 && ProximoCandidato < candidatos.length) {
             String candidato = candidatos[ProximoCandidato++];
             double salary = Math.round(ValorPretendido());
             System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
@@ -22,7 +22,7 @@ public class Case2 {
             if(salaryCia >= salary) {
                 System.out.println("Candidato Selecionado!");
                 selecionados.add(candidato);
-                NumeroFuncionarios++;
+                numeroFuncionarios++;
 
             } else {
     
@@ -31,7 +31,7 @@ public class Case2 {
            
         }
 
-            System.out.println("Hoje, nos selecionamos " + NumeroFuncionarios + " candidatos! ");
+            System.out.println("Hoje, nos selecionamos " + numeroFuncionarios + " candidatos! ");
             System.out.println("Lista dos Selecionados: ");
             for( String candidatoSelecionado : selecionados){
 
@@ -44,19 +44,24 @@ public class Case2 {
                    
             String autorizaLigar = scan.next();
 
-            scan.close();
+           
 
            if(autorizaLigar.equalsIgnoreCase("Sim")){
             do {
-
                 System.out.println("Telefone tocando!");
             } while(tocando());
 
-                System.out.println("Alo !!");
-    }
+            System.out.println("Alo !!");
 
+            } else if (autorizaLigar.equalsIgnoreCase("Nao") || autorizaLigar.equalsIgnoreCase("Não")) {
+               System.out.println("Desligando o telefone");                
+            } else {
+
+            System.out.println("Favor, dizer Sim ou Nao");
+            }
+            scan.close();
+        
     }    
-
 
     static String[] getName(){
 
@@ -79,5 +84,4 @@ public class Case2 {
 
         return ! atendeu;
     }
-
- } 
+}
