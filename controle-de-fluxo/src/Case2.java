@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -18,7 +19,7 @@ public class Case2 {
             double salary = Math.round(ValorPretendido());
             System.out.println("O Funcionario " + candidato + " deseja ter um salario de " + salary);
 
-            if(salaryCia >= salary){
+            if(salaryCia >= salary) {
                 System.out.println("Candidato Selecionado!");
                 selecionados.add(candidato);
                 NumeroFuncionarios++;
@@ -45,16 +46,16 @@ public class Case2 {
 
             scan.close();
 
-           if(autorizaLigar.equals("Sim")){
-            for(i=1; i<=3, i++){
+           if(autorizaLigar.equalsIgnoreCase("Sim")){
+            do {
 
+                System.out.println("Telefone tocando!");
+            } while(tocando());
 
-            }
-        } else{
-
-            System.out.println("Nao ligar!");
-        }
+                System.out.println("Alo !!");
     }
+
+    }    
 
 
     static String[] getName(){
@@ -68,6 +69,15 @@ public class Case2 {
      
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
 
+    }
+
+    private static boolean tocando(){
+
+        boolean atendeu = new Random().nextInt(2)==1;
+
+        System.out.println("Atendeu?" + atendeu);
+
+        return ! atendeu;
     }
 
  } 
